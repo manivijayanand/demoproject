@@ -8,12 +8,9 @@ pipeline {
       steps {
         script {
           echo 'Build'
-          rtMavenRun(
-            tool:"maven-3.6.2",
-            pom:"pom.xml",
-            goals:"--batch-mode -V -U -e clean package -Dmaven.test.skip=true -Dsurefire.useFile=false",
-            resolverId:"MAVEN_RESOLVER"
-            )
+                          sh 'mvn -B --batch-mode -V -U -e clean package -Dmaven.test.skip=true -Dsurefire.useFile=false' 
+
+
         }
       }
     }
