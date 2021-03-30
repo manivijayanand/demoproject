@@ -1,8 +1,5 @@
 pipeline {
   agent any
-  tools {
-    maven 'M3'
-  }
   parameters{
     choice(choices: 'UNIT', description:'pipeline?', name: 'PIPELINE')
   }
