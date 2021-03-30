@@ -5,6 +5,9 @@ pipeline {
   tools{
     maven 'maven-3.6.2'
   }
+  parameters{
+    choice(choices: 'UNIT', description:'pipeline?', name: 'PIPELINE')
+  }
   stages {
   stage('Build') {
       steps {
