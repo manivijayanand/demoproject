@@ -12,7 +12,7 @@ pipeline {
   stage('Build') {
       steps {
         script {
-          echo 'Stage 1'
+          echo 'Build'
           rtMavenRun(
             tool:"maven-3.6.2",
             pom:"pom.xml",
@@ -26,7 +26,7 @@ pipeline {
   stage('Stage 2') {
       steps {
         script {
-          echo 'Stage 2'
+          echo 'Stage 122'
         }
       }
     }
